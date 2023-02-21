@@ -9,8 +9,12 @@ public class Explosion : MonoBehaviour
     public GameObject explosionNPC2;
     public GameObject NPC1;
     public GameObject NPC2;
+    public GameObject NPC1_dialogue_panel;
+    public GameObject NPC2_dialogue_panel;
     public GameObject door;
+    public GameObject key;
     public bool playerIsClose;
+    private bool pointsAdded = false;
 
     // Start is called before the first frame update
     // void Start()
@@ -25,10 +29,19 @@ public class Explosion : MonoBehaviour
             explosionNPC1.SetActive(true);
             explosionDoor.SetActive(true);
             explosionNPC2.SetActive(true);
-            Debug.Log("kaboom");
+            // Debug.Log("kaboom");
             door.SetActive(false);
             NPC1.SetActive(false);
             NPC2.SetActive(false);
+            key.SetActive(false);
+            NPC1_dialogue_panel.SetActive(false);
+            NPC2_dialogue_panel.SetActive(false);
+            if (!pointsAdded)
+            {
+                ScoreManager.instance.AdddPoints(-40, -40);
+                pointsAdded = true;
+            }
+            
         }
     }
 
