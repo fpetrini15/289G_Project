@@ -13,6 +13,8 @@ public class Explosion : MonoBehaviour
     public GameObject NPC2_dialogue_panel;
     public GameObject door;
     public GameObject key;
+    public GameObject NPC1_cell_door;
+    public GameObject NPC2_cell_door;
     public bool playerIsClose;
     private bool pointsAdded = false;
 
@@ -34,6 +36,8 @@ public class Explosion : MonoBehaviour
             NPC1.SetActive(false);
             NPC2.SetActive(false);
             key.SetActive(false);
+            NPC1_cell_door.SetActive(false);
+            NPC2_cell_door.SetActive(false);
             NPC1_dialogue_panel.SetActive(false);
             NPC2_dialogue_panel.SetActive(false);
             if (!pointsAdded)

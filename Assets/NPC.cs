@@ -17,7 +17,7 @@ public class NPC : MonoBehaviour
 
     void Start()
     {
-        //dialogueText.text = "";
+        dialogueText.text = "";
     }
 
     // Update is called once per frame

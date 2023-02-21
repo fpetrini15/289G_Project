@@ -8,6 +8,8 @@ public class KeyToOpemDoor : MonoBehaviour
 {
     public GameObject doorzies;
     public GameObject skullzies;
+    public GameObject NPC1_cell_door;
+    public GameObject NPC2_cell_door;
     public Sprite doorOpen;
     public TMP_Text npc1_dialogue;
     public TMP_Text npc2_dialogue;
@@ -28,6 +30,8 @@ public class KeyToOpemDoor : MonoBehaviour
             doorzies.GetComponent<SpriteRenderer>().sprite = doorOpen;
             doorzies.GetComponent<BoxCollider2D> ().enabled = false;
             skullzies.SetActive(false);
+            NPC1_cell_door.SetActive(false);
+            NPC2_cell_door.SetActive(false);
             npc1_dialogue.text = "We're Free!";
             npc2_dialogue.text = "We're Free!";
             if (!pointsAdded)
