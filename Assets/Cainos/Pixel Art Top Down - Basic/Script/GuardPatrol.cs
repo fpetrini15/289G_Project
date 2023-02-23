@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GuardPatrol : MonoBehaviour
 {
+    [SerializeField] private FieldOfView fieldOfView;
     public Transform[] patrolPoints;
     public int patrolIndex;
     public int previousPatrolIndex;
@@ -14,6 +15,7 @@ public class GuardPatrol : MonoBehaviour
     private float waitTime;
     public float startWaitTime;
     private bool patrolPointReached; 
+    string currentDirection;
 
     private void Start()
     {
@@ -45,6 +47,9 @@ public class GuardPatrol : MonoBehaviour
             } else {
                 waitTime -= Time.deltaTime;
             }
+        } else {
+            transform.position = GetComponent<Rigidbody2D>().position;
+            UpdateFOVDirection();
         }
     }
 
@@ -63,10 +68,13 @@ public class GuardPatrol : MonoBehaviour
             dir.y = -1;
             animator.SetInteger("Direction", 0); /* Animate Down */
         }
+        currentDirection = defaultDirection;
+        UpdateFOVDirection();
         dir.Normalize();
         animator.SetBool("IsMoving", dir.magnitude > 0);
 
         GetComponent<Rigidbody2D>().velocity = speed * dir;
+        transform.position = GetComponent<Rigidbody2D>().position;
     }
 
     private void ContinuePatrol() {
@@ -79,25 +87,39 @@ public class GuardPatrol : MonoBehaviour
             if(normalizedDirection[0] > 0) {
                 dir.x = 1;
                 animator.SetInteger("Direction", 2); /* Animate Right */
+                currentDirection = "Right";
             } else {
                 dir.x = -1;
                 animator.SetInteger("Direction", 3); /* Animate Left */
+                currentDirection = "Left";
             }
         }
         else {
             if(normalizedDirection[1] > 0) { /* Move along Y-axis */
                 dir.y = 1;
                 animator.SetInteger("Direction", 1); /* Animate Up */
+                currentDirection = "Up";
             } else {
                 dir.y = -1;
                 animator.SetInteger("Direction", 0); /* Animate Down */
+                currentDirection = "Down";
             }
         }
+        UpdateFOVDirection();
         dir.Normalize();
         animator.SetBool("IsMoving", dir.magnitude > 0);
-
         GetComponent<Rigidbody2D>().velocity = speed * dir;
+        transform.position = GetComponent<Rigidbody2D>().position;
     }
 
+    private void UpdateFOVDirection() {
+        if(fieldOfView != null) {
+            Vector3 aimDirection = (patrolPoints[patrolIndex].transform.position - transform.position).normalized;
+            fieldOfView.SetAimDirection(aimDirection);
+            fieldOfView.SetOrigin(transform.position);
+        }
+    }
 }
+
+// 60.240.150.330
 
