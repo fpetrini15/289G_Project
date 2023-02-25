@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HammerScript : MonoBehaviour
+public class HammerToInjure : MonoBehaviour
 {
-    private bool pickUpAllowed;
-    
+     private bool pickUpAllowed;
+     public GameObject gun;       
+     private bool pointsAdded = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +19,11 @@ public class HammerScript : MonoBehaviour
     {
         if (pickUpAllowed && Input.GetKeyDown(KeyCode.E)){
             pickUp();
+            if (!pointsAdded)
+            {
+                ScoreManager.instance.AdddPoints(-20, -20);
+                pointsAdded = true;
+            }
         }
     }
 
@@ -34,5 +41,7 @@ public class HammerScript : MonoBehaviour
 
     private void pickUp(){
         Destroy(gameObject);
+        gun.SetActive(false);
+        //hammer.HammerToInjure.enabled = false;
     }
 }
