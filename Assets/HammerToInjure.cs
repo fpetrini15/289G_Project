@@ -7,6 +7,7 @@ public class HammerToInjure : MonoBehaviour
      private bool pickUpAllowed;
      public GameObject gun;       
      private bool pointsAdded = false;
+     public GameObject hammer2;
 
     // Start is called before the first frame update
     void Start()
@@ -42,6 +43,7 @@ public class HammerToInjure : MonoBehaviour
     private void pickUp(){
         Destroy(gameObject);
         gun.SetActive(false);
+        hammer2.SetActive(true);
         //hammer.HammerToInjure.enabled = false;
     }
 }
