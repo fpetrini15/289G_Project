@@ -8,6 +8,8 @@ public class ShootScript : MonoBehaviour
     public GameObject Bullet;
     public float BulletSpeed;
     public Transform ShootPoint;
+    public float fireRate;
+    float ReadyForNextShot;    
 
     Vector2 direction;
     
@@ -24,8 +26,12 @@ public class ShootScript : MonoBehaviour
         direction = mousePos - (Vector2)Gun.position;
         FaceMouse();
 
-        if(Input.GetKeyDown(KeyCode.Space)){
-             shoot();   
+        if(Input.GetKey(KeyCode.Space)){
+            if(Time.time > ReadyForNextShot){
+                ReadyForNextShot = Time.time + 1/fireRate;
+                shoot(); 
+            }
+              
         }
          
     }
@@ -37,6 +43,7 @@ public class ShootScript : MonoBehaviour
     void shoot(){
         GameObject BulletIns = Instantiate(Bullet, ShootPoint.position, ShootPoint.rotation);
         BulletIns.GetComponent<Rigidbody2D>().AddForce(BulletIns.transform.right * BulletSpeed);
+        Destroy(BulletIns, 3);
     }
 
 }
