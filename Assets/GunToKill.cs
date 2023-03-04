@@ -9,6 +9,8 @@ public class GunToKill : MonoBehaviour
     private bool pointsAdded = false;
     public GameObject body;
     public GameObject gun2;
+    public GameObject LockPickGuyDialogueBox;
+    public GameObject LockPickGuy;  
     ShootScript shootscript;
 
     // Start is called before the first frame update
@@ -46,6 +48,8 @@ public class GunToKill : MonoBehaviour
         Destroy(gameObject);
         hammer.SetActive(false);
         gun2.SetActive(true);
+        LockPickGuyDialogueBox.SetActive(false);
+        LockPickGuy.GetComponent<DropLockPick>().enabled = false;
         //shoot_script = FindObjectOfType<ShootScript>();
         shootscript = GameObject.Find("body").GetComponent<ShootScript>();
         //hammer.HammerToInjure.enabled = false;

@@ -8,6 +8,8 @@ public class HammerToInjure : MonoBehaviour
      public GameObject gun;       
      private bool pointsAdded = false;
      public GameObject hammer2;
+     public GameObject LockPickGuyDialogueBox;
+     public GameObject LockPickGuy;
 
     // Start is called before the first frame update
     void Start()
@@ -44,6 +46,8 @@ public class HammerToInjure : MonoBehaviour
         Destroy(gameObject);
         gun.SetActive(false);
         hammer2.SetActive(true);
+        LockPickGuyDialogueBox.SetActive(false);
+        LockPickGuy.GetComponent<DropLockPick>().enabled = false;
         //hammer.HammerToInjure.enabled = false;
     }
 }

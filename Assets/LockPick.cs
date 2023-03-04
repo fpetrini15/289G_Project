@@ -6,6 +6,10 @@ using TMPro;
 public class LockPick : MonoBehaviour
 {
     public GameObject lvl2_door;
+    public GameObject NPC3_cell_door;
+    public GameObject NPC4_cell_door;
+    public GameObject NPC5_cell_door;
+    public GameObject NPC5_cell_door_2;
     public Sprite doorOpen;
     public TMP_Text lock_pick_guy_dialogue;
     public bool playerIsClose;
@@ -24,6 +28,10 @@ public class LockPick : MonoBehaviour
         {
             lvl2_door.GetComponent<SpriteRenderer>().sprite = doorOpen;
             lvl2_door.GetComponent<BoxCollider2D> ().enabled = false;
+            NPC3_cell_door.SetActive(false);
+            NPC4_cell_door.SetActive(false);
+            NPC5_cell_door.SetActive(false);
+            NPC5_cell_door_2.SetActive(false);
             lock_pick_guy_dialogue.text = "We're Free!";
             if (!pointsAdded)
             {
