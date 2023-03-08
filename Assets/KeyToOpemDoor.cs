@@ -14,8 +14,10 @@ public class KeyToOpemDoor : MonoBehaviour
     public TMP_Text npc1_dialogue;
     public TMP_Text npc2_dialogue;
     public TMP_Text lvl2_npc_dialogue;
+    public TMP_Text lvl2_npc_dialogue_2;
     public string[] dialogue_options = new string[5];
     private string selected_dialogue;
+    private string selected_dialogue_2;
     public bool playerIsClose;
     private bool pointsAdded = false;
 
@@ -37,8 +39,12 @@ public class KeyToOpemDoor : MonoBehaviour
             NPC2_cell_door.SetActive(false);
             npc1_dialogue.text = "We're Free!";
             npc2_dialogue.text = "We're Free!";
-            selected_dialogue = dialogue_options[Random.Range(0, dialogue_options.Length)];
+            int index = Random.Range(0, dialogue_options.Length);
+            int index_2 = (index + 1) % 5;
+            selected_dialogue = dialogue_options[index];
+            selected_dialogue_2 = dialogue_options[index_2];
             lvl2_npc_dialogue.text = selected_dialogue;
+            lvl2_npc_dialogue_2.text = selected_dialogue_2;
             if (!pointsAdded)
             {
                 ScoreManager.instance.AdddPoints(15, 15);

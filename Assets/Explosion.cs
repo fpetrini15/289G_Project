@@ -17,8 +17,10 @@ public class Explosion : MonoBehaviour
     public GameObject NPC1_cell_door;
     public GameObject NPC2_cell_door;
     public TMP_Text lvl2_npc_dialogue;
+    public TMP_Text lvl2_npc_dialogue_2;
     public string[] dialogue_options = new string[5];
     private string selected_dialogue;
+    private string selected_dialogue_2;
     public bool playerIsClose;
     private bool pointsAdded = false;
 
@@ -45,8 +47,12 @@ public class Explosion : MonoBehaviour
             NPC2_cell_door.SetActive(false);
             NPC1_dialogue_panel.SetActive(false);
             NPC2_dialogue_panel.SetActive(false);
-            selected_dialogue = dialogue_options[Random.Range(0, dialogue_options.Length)];
+            int index = Random.Range(0, dialogue_options.Length);
+            int index_2 = (index + 1) % 5;
+            selected_dialogue = dialogue_options[index];
+            selected_dialogue_2 = dialogue_options[index_2];
             lvl2_npc_dialogue.text = selected_dialogue;
+            lvl2_npc_dialogue_2.text = selected_dialogue_2;
             if (!pointsAdded)
             {
                 ScoreManager.instance.AdddPoints(-40, -40);
