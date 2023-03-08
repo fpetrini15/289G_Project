@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Explosion : MonoBehaviour
 {
@@ -15,13 +16,17 @@ public class Explosion : MonoBehaviour
     public GameObject key;
     public GameObject NPC1_cell_door;
     public GameObject NPC2_cell_door;
+    public TMP_Text lvl2_npc_dialogue;
+    public string[] dialogue_options = new string[5];
+    private string selected_dialogue;
     public bool playerIsClose;
     private bool pointsAdded = false;
 
     // Start is called before the first frame update
-    // void Start()
-    // {
-    // }
+    void Start()
+    {
+        
+    }
 
     // Update is called once per frameee
     void Update()
@@ -40,6 +45,8 @@ public class Explosion : MonoBehaviour
             NPC2_cell_door.SetActive(false);
             NPC1_dialogue_panel.SetActive(false);
             NPC2_dialogue_panel.SetActive(false);
+            selected_dialogue = dialogue_options[Random.Range(0, dialogue_options.Length)];
+            lvl2_npc_dialogue.text = selected_dialogue;
             if (!pointsAdded)
             {
                 ScoreManager.instance.AdddPoints(-40, -40);
