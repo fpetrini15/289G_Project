@@ -21,6 +21,7 @@ public class HarmGuard : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && playerIsClose){
             Debug.Log("Colided");
             GameObject bloodIns = Instantiate(blood, transform.position, Quaternion.identity);
+            Debug.Log("Instantiated");
             Destroy (guard);
             Destroy (fov);
         }
