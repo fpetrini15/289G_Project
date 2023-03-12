@@ -1347,6 +1347,7 @@ GameObject:
   m_Component:
   - component: {fileID: 396401813}
   - component: {fileID: 396401814}
+  - component: {fileID: 396401815}
   m_Layer: 20
   m_Name: gun2
   m_TagString: Untagged
@@ -1422,6 +1423,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &396401815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 396401812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1f0d76dd3733422192b5d70fe2e4c74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Gun: {fileID: 396401813}
+  Bullet: {fileID: 4281599298627598602, guid: 0178f4643417944c18fe402e234d662b, type: 3}
+  BulletSpeed: 1200
+  ShootPoint: {fileID: 1463934861}
+  fireRate: 4
 --- !u!1 &424252269
 GameObject:
   m_ObjectHideFlags: 0
@@ -1601,7 +1619,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 459289067}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a1f0d76dd3733422192b5d70fe2e4c74, type: 3}
   m_Name: 
@@ -1991,6 +2009,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 4281599298627598602, guid: 0178f4643417944c18fe402e234d662b, type: 3}
   fov: {fileID: 1073414886}
+  blood: {fileID: 4758788576945127766, guid: 21240158094624a7f96e26036aa4578b, type: 3}
   shotByBullet: 0
 --- !u!1001 &576934833
 PrefabInstance:

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class KillGuard : MonoBehaviour
 {
-    public GameObject bullet, fov;
+    public GameObject bullet, fov, blood;
     public bool shotByBullet = false;
     // Start is called before the first frame update
     void Start()
@@ -16,6 +16,7 @@ public class KillGuard : MonoBehaviour
     void Update()
     {
         if (shotByBullet){
+            GameObject bloodIns = Instantiate(blood, transform.position, Quaternion.identity);
             Debug.Log("Shot by bullet");
             Destroy(fov);
             Destroy(gameObject);
