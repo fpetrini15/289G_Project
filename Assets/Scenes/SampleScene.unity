@@ -2010,6 +2010,8 @@ MonoBehaviour:
   bullet: {fileID: 4281599298627598602, guid: 0178f4643417944c18fe402e234d662b, type: 3}
   fov: {fileID: 1073414886}
   blood: {fileID: 4758788576945127766, guid: 21240158094624a7f96e26036aa4578b, type: 3}
+  lvl2_door: {fileID: 841580779}
+  doorOpen: {fileID: 21300160, guid: 29c9cded5e558164aaf8c9bf08aa1510, type: 3}
   shotByBullet: 0
 --- !u!1001 &576934833
 PrefabInstance:
@@ -2929,7 +2931,7 @@ PrefabInstance:
     - target: {fileID: 5628018141983903116, guid: ef67ba864d1ecc042b5f4cf48455c0a6,
         type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5628018141983903117, guid: ef67ba864d1ecc042b5f4cf48455c0a6,
         type: 3}
@@ -13704,6 +13706,8 @@ MonoBehaviour:
   blood: {fileID: 4758788576945127766, guid: 21240158094624a7f96e26036aa4578b, type: 3}
   guard: {fileID: 545445634}
   fov: {fileID: 1073414886}
+  lvl2_door: {fileID: 841580779}
+  doorOpen: {fileID: 21300160, guid: 29c9cded5e558164aaf8c9bf08aa1510, type: 3}
   playerIsClose: 0
 --- !u!1 &1698284747
 GameObject:

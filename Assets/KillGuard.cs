@@ -5,7 +5,11 @@ using UnityEngine;
 public class KillGuard : MonoBehaviour
 {
     public GameObject bullet, fov, blood;
+    public GameObject lvl2_door;
+    public Sprite doorOpen;
     public bool shotByBullet = false;
+    private bool pointsAdded = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +24,13 @@ public class KillGuard : MonoBehaviour
             Debug.Log("Shot by bullet");
             Destroy(fov);
             Destroy(gameObject);
+            lvl2_door.GetComponent<SpriteRenderer>().sprite = doorOpen;
+            lvl2_door.GetComponent<BoxCollider2D> ().enabled = false;
+            if (!pointsAdded)
+            {
+                ScoreManager.instance.AdddPoints(20, -20);
+                pointsAdded = true;
+            }
         }
     }
     void OnTriggerEnter2D(Collider2D other){
