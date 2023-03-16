@@ -23,6 +23,7 @@ public class Explosion : MonoBehaviour
     private string selected_dialogue_2;
     public bool playerIsClose;
     private bool pointsAdded = false;
+    public AudioSource audioSource_;
 
     // Start is called before the first frame update
     void Start()
@@ -35,6 +36,7 @@ public class Explosion : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && playerIsClose)
         {
+            audioSource_.Play();
             explosionNPC1.SetActive(true);
             explosionDoor.SetActive(true);
             explosionNPC2.SetActive(true);

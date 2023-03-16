@@ -12,6 +12,7 @@ public class ShootScript : MonoBehaviour
     float ReadyForNextShot;    
 
     Vector2 direction;
+    public AudioSource audioSource_;
     
     // Start is called before the first frame update
     void Start()
@@ -41,6 +42,7 @@ public class ShootScript : MonoBehaviour
     }
 
     void shoot(){
+        audioSource_.Play();
         GameObject BulletIns = Instantiate(Bullet, ShootPoint.position, ShootPoint.rotation);
         BulletIns.GetComponent<Rigidbody2D>().AddForce(BulletIns.transform.right * BulletSpeed);
         Destroy(BulletIns, 2);

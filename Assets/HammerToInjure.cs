@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class HammerToInjure : MonoBehaviour
 {
-     private bool pickUpAllowed;
-     public GameObject gun;       
-     private bool pointsAdded = false;
-     public GameObject hammer2;
-     public GameObject LockPickGuyDialogueBox;
-     public GameObject LockPickGuy;
-
+    private bool pickUpAllowed;
+    public GameObject gun;       
+    private bool pointsAdded = false;
+    public GameObject hammer2;
+    public GameObject LockPickGuyDialogueBox;
+    public GameObject LockPickGuy;
+    public AudioSource audioSource_;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +22,7 @@ public class HammerToInjure : MonoBehaviour
     {
         if (pickUpAllowed && Input.GetKeyDown(KeyCode.E)){
             pickUp();
+            audioSource_.Play();
             if (!pointsAdded)
             {
                 ScoreManager.instance.AdddPoints(-20, -20);

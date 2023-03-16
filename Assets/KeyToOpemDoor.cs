@@ -20,6 +20,7 @@ public class KeyToOpemDoor : MonoBehaviour
     private string selected_dialogue_2;
     public bool playerIsClose;
     private bool pointsAdded = false;
+    public AudioSource audioSource_;
 
     // Start is called before the first frame update
     // void Start()
@@ -45,6 +46,7 @@ public class KeyToOpemDoor : MonoBehaviour
             selected_dialogue_2 = dialogue_options[index_2];
             lvl2_npc_dialogue.text = selected_dialogue;
             lvl2_npc_dialogue_2.text = selected_dialogue_2;
+            audioSource_.Play();
             if (!pointsAdded)
             {
                 ScoreManager.instance.AdddPoints(15, 15);

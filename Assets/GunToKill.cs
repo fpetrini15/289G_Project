@@ -12,6 +12,7 @@ public class GunToKill : MonoBehaviour
     public GameObject LockPickGuyDialogueBox;
     public GameObject LockPickGuy;  
     ShootScript shootscript;
+    public AudioSource audioSource_;
 
     // Start is called before the first frame update
     void Start()
@@ -52,6 +53,7 @@ public class GunToKill : MonoBehaviour
         LockPickGuy.GetComponent<DropLockPick>().enabled = false;
         //shoot_script = FindObjectOfType<ShootScript>();
         shootscript = GameObject.Find("body").GetComponent<ShootScript>();
+        audioSource_.Play();
         //hammer.HammerToInjure.enabled = false;
     }
 }
