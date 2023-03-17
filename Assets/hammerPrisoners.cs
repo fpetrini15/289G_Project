@@ -8,6 +8,7 @@ public class hammerPrisoners : MonoBehaviour
     private bool pickUpAllowed;
     private bool pointsAdded = false;
     public GameObject blood;
+    public AudioSource audioSource_;
 
     void Update()
     {
@@ -15,7 +16,7 @@ public class hammerPrisoners : MonoBehaviour
             if (!pointsAdded)
             {
                 GameObject bloodIns = Instantiate(blood, transform.position, Quaternion.identity);
-                // audioSource_.Play();
+                audioSource_.Play();
                 Destroy(gameObject);
                 ScoreManager.instance.AdddPoints(-20, -20);
                 pointsAdded = true;
