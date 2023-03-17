@@ -1870,6 +1870,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 5628018141983903104, guid: ef67ba864d1ecc042b5f4cf48455c0a6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 5628018141983903106, guid: ef67ba864d1ecc042b5f4cf48455c0a6,
         type: 3}
       propertyPath: m_RootOrder
@@ -2180,6 +2185,19 @@ MonoBehaviour:
   blood: {fileID: 4758788576945127766, guid: 21240158094624a7f96e26036aa4578b, type: 3}
   shotByBullet: 0
   audioSource_: {fileID: 1637472452}
+--- !u!114 &518975276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 518975262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31d7bdb01bcd544f09281f1472ff5db9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blood: {fileID: 4758788576945127766, guid: 21240158094624a7f96e26036aa4578b, type: 3}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -2510,6 +2528,19 @@ MonoBehaviour:
   blood: {fileID: 4758788576945127766, guid: 21240158094624a7f96e26036aa4578b, type: 3}
   shotByBullet: 0
   audioSource_: {fileID: 1637472452}
+--- !u!114 &540650403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 540650395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31d7bdb01bcd544f09281f1472ff5db9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blood: {fileID: 4758788576945127766, guid: 21240158094624a7f96e26036aa4578b, type: 3}
 --- !u!1 &545445634 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5628018141983903104, guid: ef67ba864d1ecc042b5f4cf48455c0a6,
@@ -3344,6 +3375,19 @@ MonoBehaviour:
   blood: {fileID: 4758788576945127766, guid: 21240158094624a7f96e26036aa4578b, type: 3}
   shotByBullet: 0
   audioSource_: {fileID: 1637472452}
+--- !u!114 &710763206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 710763198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31d7bdb01bcd544f09281f1472ff5db9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blood: {fileID: 4758788576945127766, guid: 21240158094624a7f96e26036aa4578b, type: 3}
 --- !u!1 &718623735
 GameObject:
   m_ObjectHideFlags: 0
@@ -6218,6 +6262,19 @@ MonoBehaviour:
   blood: {fileID: 4758788576945127766, guid: 21240158094624a7f96e26036aa4578b, type: 3}
   shotByBullet: 0
   audioSource_: {fileID: 1637472452}
+--- !u!114 &1382591884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1382591876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31d7bdb01bcd544f09281f1472ff5db9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blood: {fileID: 4758788576945127766, guid: 21240158094624a7f96e26036aa4578b, type: 3}
 --- !u!1 &1385864564
 GameObject:
   m_ObjectHideFlags: 0
@@ -17254,6 +17311,19 @@ MonoBehaviour:
   blood: {fileID: 4758788576945127766, guid: 21240158094624a7f96e26036aa4578b, type: 3}
   shotByBullet: 0
   audioSource_: {fileID: 1637472452}
+--- !u!114 &1746350770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1746350762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31d7bdb01bcd544f09281f1472ff5db9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blood: {fileID: 4758788576945127766, guid: 21240158094624a7f96e26036aa4578b, type: 3}
 --- !u!1 &1762698488
 GameObject:
   m_ObjectHideFlags: 0
@@ -25243,6 +25313,19 @@ MonoBehaviour:
   blood: {fileID: 4758788576945127766, guid: 21240158094624a7f96e26036aa4578b, type: 3}
   shotByBullet: 0
   audioSource_: {fileID: 1637472452}
+--- !u!114 &2064555822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2064555814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31d7bdb01bcd544f09281f1472ff5db9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blood: {fileID: 4758788576945127766, guid: 21240158094624a7f96e26036aa4578b, type: 3}
 --- !u!1001 &2065320613
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25344,6 +25427,19 @@ MonoBehaviour:
   blood: {fileID: 4758788576945127766, guid: 21240158094624a7f96e26036aa4578b, type: 3}
   shotByBullet: 0
   audioSource_: {fileID: 1637472452}
+--- !u!114 &2065320622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2065320614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31d7bdb01bcd544f09281f1472ff5db9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blood: {fileID: 4758788576945127766, guid: 21240158094624a7f96e26036aa4578b, type: 3}
 --- !u!224 &2091464831 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6110521548605388346, guid: 24189886e606348d4a960fb02506b955,
