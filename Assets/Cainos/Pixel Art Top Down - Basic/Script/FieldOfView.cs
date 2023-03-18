@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FieldOfView : MonoBehaviour
 {
@@ -43,6 +44,7 @@ public class FieldOfView : MonoBehaviour
                 vertex = raycastHit2D.point;
                 if(raycastHit2D.collider.tag == "Player") {
                     Debug.Log("Player Detected. Game Over!");
+                    changeToGameOverScreen();
                 }
             }
            
@@ -84,5 +86,9 @@ public class FieldOfView : MonoBehaviour
     {
         float angleRad = angle * (Mathf.PI/180f);
         return new Vector3(Mathf.Cos(angleRad), Mathf.Sin(angleRad));
+    }
+
+    public void changeToGameOverScreen(){
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
