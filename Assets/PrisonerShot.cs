@@ -5,6 +5,7 @@ using UnityEngine;
 public class PrisonerShot : MonoBehaviour
 {
     public GameObject bullet, blood;
+    public GameObject lvl3_npc_dialogue;
     public bool shotByBullet = false;
     public AudioSource audioSource_;
 
@@ -22,7 +23,9 @@ public class PrisonerShot : MonoBehaviour
             GameObject bloodIns = Instantiate(blood, transform.position, Quaternion.identity);
             audioSource_.Play();
             Destroy(gameObject);
+            Destroy(lvl3_npc_dialogue);
             ScoreManager.instance.PrisonerDestroyed();
+            ScoreManager.instance.AdddPoints(-20, -20);
         }
     }
     void OnTriggerEnter2D(Collider2D other){

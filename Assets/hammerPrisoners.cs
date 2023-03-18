@@ -8,6 +8,7 @@ public class hammerPrisoners : MonoBehaviour
     private bool pickUpAllowed;
     private bool pointsAdded = false;
     public GameObject blood;
+    public GameObject lvl3_npc_dialogue;
     public AudioSource audioSource_;
 
     void Update()
@@ -18,7 +19,8 @@ public class hammerPrisoners : MonoBehaviour
                 GameObject bloodIns = Instantiate(blood, transform.position, Quaternion.identity);
                 audioSource_.Play();
                 Destroy(gameObject);
-                ScoreManager.instance.AdddPoints(-20, -20);
+                Destroy(lvl3_npc_dialogue);
+                ScoreManager.instance.AdddPoints(-10, -10);
                 pointsAdded = true;
             }
         }

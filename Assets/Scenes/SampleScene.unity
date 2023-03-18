@@ -2854,6 +2854,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 4281599298627598602, guid: 0178f4643417944c18fe402e234d662b, type: 3}
   blood: {fileID: 4758788576945127766, guid: 21240158094624a7f96e26036aa4578b, type: 3}
+  lvl3_npc_dialogue: {fileID: 2126885209}
   shotByBullet: 0
   audioSource_: {fileID: 1637472452}
 --- !u!114 &518975276
@@ -2869,6 +2870,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blood: {fileID: 4758788576945127766, guid: 21240158094624a7f96e26036aa4578b, type: 3}
+  lvl3_npc_dialogue: {fileID: 2126885209}
   audioSource_: {fileID: 1637472452}
 --- !u!1 &519420028
 GameObject:
@@ -3218,6 +3220,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 4281599298627598602, guid: 0178f4643417944c18fe402e234d662b, type: 3}
   blood: {fileID: 4758788576945127766, guid: 21240158094624a7f96e26036aa4578b, type: 3}
+  lvl3_npc_dialogue: {fileID: 0}
   shotByBullet: 0
   audioSource_: {fileID: 1637472452}
 --- !u!114 &540650403
@@ -3233,6 +3236,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blood: {fileID: 4758788576945127766, guid: 21240158094624a7f96e26036aa4578b, type: 3}
+  lvl3_npc_dialogue: {fileID: 0}
   audioSource_: {fileID: 1637472452}
 --- !u!1 &545445634 stripped
 GameObject:
@@ -3553,6 +3557,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6644944588469475090, guid: 4be821d0b78ad5043985b57b738e951b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6644944589867386884, guid: 4be821d0b78ad5043985b57b738e951b,
         type: 3}
       propertyPath: m_RootOrder
@@ -4781,6 +4790,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 4281599298627598602, guid: 0178f4643417944c18fe402e234d662b, type: 3}
   blood: {fileID: 4758788576945127766, guid: 21240158094624a7f96e26036aa4578b, type: 3}
+  lvl3_npc_dialogue: {fileID: 348081969}
   shotByBullet: 0
   audioSource_: {fileID: 1637472452}
 --- !u!114 &710763206
@@ -4796,6 +4806,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blood: {fileID: 4758788576945127766, guid: 21240158094624a7f96e26036aa4578b, type: 3}
+  lvl3_npc_dialogue: {fileID: 348081969}
   audioSource_: {fileID: 1637472452}
 --- !u!1 &718623735
 GameObject:
@@ -5530,15 +5541,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lvl2_door: {fileID: 841580779}
-  lvl3_npc_dialogue_1: {fileID: 0}
-  lvl3_npc_dialogue_2: {fileID: 0}
-  lvl3_npc_dialogue_3: {fileID: 0}
-  dialogue_options:
-  - 
-  - 
-  - 
-  - 
-  - 
+  lvl3_npc_dialogue_1: {fileID: 167225073}
+  lvl3_npc_dialogue_2: {fileID: 2042413598}
+  lvl3_npc_dialogue_3: {fileID: 92404742}
+  lvl3_npc_dialogue_4: {fileID: 550196121}
 --- !u!1 &851870745
 GameObject:
   m_ObjectHideFlags: 0
@@ -6452,6 +6458,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2055102312182832482, guid: 6a057178eb028e94fb93bf39262ea3e8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a057178eb028e94fb93bf39262ea3e8, type: 3}
 --- !u!1 &950382660 stripped
@@ -6846,7 +6857,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1039875326}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4718376c1384a4fa5a78dd9ebea7e224, type: 3}
   m_Name: 
@@ -6855,12 +6866,7 @@ MonoBehaviour:
   lvl3_npc_dialogue_1: {fileID: 0}
   lvl3_npc_dialogue_2: {fileID: 0}
   lvl3_npc_dialogue_3: {fileID: 0}
-  dialogue_options:
-  - 
-  - 
-  - 
-  - 
-  - 
+  lvl3_npc_dialogue_4: {fileID: 0}
 --- !u!1 &1065581853
 GameObject:
   m_ObjectHideFlags: 0
@@ -8232,6 +8238,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 4281599298627598602, guid: 0178f4643417944c18fe402e234d662b, type: 3}
   blood: {fileID: 4758788576945127766, guid: 21240158094624a7f96e26036aa4578b, type: 3}
+  lvl3_npc_dialogue: {fileID: 0}
   shotByBullet: 0
   audioSource_: {fileID: 1637472452}
 --- !u!114 &1382591884
@@ -8247,6 +8254,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blood: {fileID: 4758788576945127766, guid: 21240158094624a7f96e26036aa4578b, type: 3}
+  lvl3_npc_dialogue: {fileID: 0}
   audioSource_: {fileID: 1637472452}
 --- !u!1 &1385864564
 GameObject:
@@ -19996,6 +20004,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 4281599298627598602, guid: 0178f4643417944c18fe402e234d662b, type: 3}
   blood: {fileID: 4758788576945127766, guid: 21240158094624a7f96e26036aa4578b, type: 3}
+  lvl3_npc_dialogue: {fileID: 1935110574}
   shotByBullet: 0
   audioSource_: {fileID: 1637472452}
 --- !u!114 &1746350770
@@ -20011,6 +20020,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blood: {fileID: 4758788576945127766, guid: 21240158094624a7f96e26036aa4578b, type: 3}
+  lvl3_npc_dialogue: {fileID: 1935110574}
   audioSource_: {fileID: 1637472452}
 --- !u!1 &1762698488
 GameObject:
@@ -28788,6 +28798,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 4281599298627598602, guid: 0178f4643417944c18fe402e234d662b, type: 3}
   blood: {fileID: 4758788576945127766, guid: 21240158094624a7f96e26036aa4578b, type: 3}
+  lvl3_npc_dialogue: {fileID: 395631837}
   shotByBullet: 0
   audioSource_: {fileID: 1637472452}
 --- !u!114 &2064555822
@@ -28803,6 +28814,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blood: {fileID: 4758788576945127766, guid: 21240158094624a7f96e26036aa4578b, type: 3}
+  lvl3_npc_dialogue: {fileID: 395631837}
   audioSource_: {fileID: 1637472452}
 --- !u!1001 &2065320613
 PrefabInstance:
@@ -28923,6 +28935,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 4281599298627598602, guid: 0178f4643417944c18fe402e234d662b, type: 3}
   blood: {fileID: 4758788576945127766, guid: 21240158094624a7f96e26036aa4578b, type: 3}
+  lvl3_npc_dialogue: {fileID: 0}
   shotByBullet: 0
   audioSource_: {fileID: 1637472452}
 --- !u!114 &2065320622
@@ -28938,6 +28951,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blood: {fileID: 4758788576945127766, guid: 21240158094624a7f96e26036aa4578b, type: 3}
+  lvl3_npc_dialogue: {fileID: 0}
   audioSource_: {fileID: 1637472452}
 --- !u!1 &2076389458
 GameObject:
