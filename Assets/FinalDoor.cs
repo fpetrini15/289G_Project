@@ -14,14 +14,13 @@ public class FinalDoor : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
         if (shotByBullet){
-            Debug.Log("Shot by bullet");
             audioSource_.Play();
             this.GetComponent<SpriteRenderer>().sprite = doorOpen;
             this.GetComponent<BoxCollider2D> ().enabled = false;
@@ -30,16 +29,16 @@ public class FinalDoor : MonoBehaviour
             endDoorKey_.SetActive(true);
         }
     }
-    void OnTriggerEnter2D(Collider2D other){
-            if(other.CompareTag("Bullet")){
-                shotByBullet = true;
-            }
-        }
 
-    private void OnTriggerExit2D(Collider2D other){
-            if(other.CompareTag("Bullet")){
-                shotByBullet = false;
-            }
+    void OnCollisionEnter2D(Collision2D other) {
+        if(other.gameObject.tag == "Bullet") {
+            shotByBullet = true;
         }
-    
+    }
+
+    void OnCollisionExit2D(Collision2D other) {
+        if(other.gameObject.tag == "Bullet") {
+            shotByBullet = false;
+        }
+    }
 }

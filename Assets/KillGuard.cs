@@ -34,7 +34,7 @@ public class KillGuard : MonoBehaviour
                 ScoreManager.instance.AdddPoints(20, -20);
                 pointsAdded = true;
             }
-            if(ScoreManager.instance.GetSanityScore() <= -20) { // clean runs are rewarded
+            if(ScoreManager.instance.GetSanityScore() <= 0) { // clean runs are rewarded
                 endDoorKey_.SetActive(false);
             }
         }

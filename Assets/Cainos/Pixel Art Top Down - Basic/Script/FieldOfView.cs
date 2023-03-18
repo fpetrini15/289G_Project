@@ -41,7 +41,11 @@ public class FieldOfView : MonoBehaviour
             } else {
                 //hit
                 vertex = raycastHit2D.point;
+                if(raycastHit2D.collider.tag == "Player") {
+                    Debug.Log("Player Detected. Game Over!");
+                }
             }
+           
             vertices[vertexIndex] = vertex;
 
             if(i > 0) {

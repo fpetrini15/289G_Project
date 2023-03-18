@@ -8,6 +8,7 @@ public class UseHammer : MonoBehaviour
     public GameObject blood, guard, fov;
     public GameObject lvl2_door;
     public GameObject finalDoor_;
+    public GameObject endDoorKey_;
     public Sprite doorOpen;
     public bool playerIsClose;
     public bool attackingGuard = false;
@@ -26,7 +27,7 @@ public class UseHammer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && playerIsClose){
+        if ((Input.GetKeyDown(KeyCode.E) || Input.GetKey(KeyCode.Space)) && playerIsClose){
             if(attackingGuard) {
                 Debug.Log("Colided");
                 GameObject bloodIns = Instantiate(blood, transform.position, Quaternion.identity);
@@ -40,6 +41,9 @@ public class UseHammer : MonoBehaviour
                 {
                     ScoreManager.instance.AdddPoints(15, -15);
                     pointsAdded = true;
+                }
+                if(ScoreManager.instance.GetSanityScore() <= 0) { // clean runs are rewarded
+                    endDoorKey_.SetActive(false);
                 }
             } else {
                 breakDoor_.Play();
@@ -55,10 +59,6 @@ public class UseHammer : MonoBehaviour
         if(other.CompareTag("Guard")){
             playerIsClose = true;
             attackingGuard = true;
-        } else if(other.CompareTag("EndDoor")) {
-            Debug.Log("Coliding with final door!");
-            playerIsClose = true;
-            attackingGuard = false;
         }
     }
 
@@ -68,6 +68,20 @@ public class UseHammer : MonoBehaviour
             playerIsClose = false;
             attackingGuard = false;
         } else if(other.CompareTag("EndDoor")) {
+            playerIsClose = false;
+            attackingGuard = false;
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D other) {
+        if(other.gameObject.CompareTag("EndDoor")) {
+            playerIsClose = true;
+            attackingGuard = false;
+        }
+    }
+
+    void OnCollisionExit2D(Collision2D other) {
+        if(other.gameObject.CompareTag("EndDoor")) {
             playerIsClose = false;
             attackingGuard = false;
         }

@@ -14,6 +14,7 @@ public class LockPick : MonoBehaviour
     public TMP_Text lock_pick_guy_dialogue;
     public bool playerIsClose;
     private bool pointsAdded = false;
+    public AudioSource audioSource_;
 
     // Start is called before the first frame update
     // void Start()
@@ -33,6 +34,7 @@ public class LockPick : MonoBehaviour
             NPC5_cell_door.SetActive(false);
             NPC5_cell_door_2.SetActive(false);
             lock_pick_guy_dialogue.text = "We're Free!";
+            audioSource_.Play();
             if (!pointsAdded)
             {
                 ScoreManager.instance.AdddPoints(15, 15);

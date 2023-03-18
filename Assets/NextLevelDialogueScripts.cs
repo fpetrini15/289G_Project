@@ -20,7 +20,7 @@ public class NextLevelDialogueScripts : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (lvl2_door.GetComponent<BoxCollider2D> ().enabled == false && !doorOpened)
+        /*if (lvl2_door.GetComponent<BoxCollider2D> ().enabled == false && !doorOpened)
         {
             Debug.Log("Open Sesame");
             int sanityScore = ScoreManager.instance.GetSanityScore();
@@ -30,7 +30,7 @@ public class NextLevelDialogueScripts : MonoBehaviour
 
             // }
             doorOpened = true;
-        }
+        }*/
         
     }
 }
