@@ -13,7 +13,7 @@ This game was developed with Unity, which is a requirement in order to run and p
 </ul>
 
 <h3>Screenshots</h3>
-
+![Level 1](level1-Game.png)
 
 
 <h3>Video Demo</h3>
