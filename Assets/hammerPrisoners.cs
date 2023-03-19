@@ -21,7 +21,7 @@ public class hammerPrisoners : MonoBehaviour
                 Destroy(gameObject);
                 Destroy(lvl3_npc_dialogue);
                 ScoreManager.instance.PrisonerDestroyed();
-                ScoreManager.instance.AdddPoints(-5, -5);
+                ScoreManager.instance.AdddPoints(-15, -15);
                 pointsAdded = true;
             }
         }

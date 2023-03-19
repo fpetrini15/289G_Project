@@ -25,9 +25,9 @@ public class NextLevelDialogueScripts : MonoBehaviour
             Debug.Log("Open Sesame");
             int sanityScore = ScoreManager.instance.GetSanityScore();
             int reputation = ScoreManager.instance.GetReputationScore();
-            if (sanityScore <= -40)
+            if (sanityScore <= -35)
             {
-                if (reputation <= -40)
+                if (reputation <= -35)
                 {
                     //scared
                     lvl3_npc_dialogue_1.text = "Please don't kill us!";
@@ -44,9 +44,9 @@ public class NextLevelDialogueScripts : MonoBehaviour
                     lvl3_npc_dialogue_4.text = "Will you spare our lives?";
                 }
             }
-            else if (sanityScore <= -20)
+            else if (sanityScore <= -15)
             {
-                if (reputation <= -20)
+                if (reputation < 10)
                 {
                     //mixed
                     lvl3_npc_dialogue_1.text = "Just because he killed some prisoners doesn't mean he'll kill us.";
@@ -85,7 +85,7 @@ public class NextLevelDialogueScripts : MonoBehaviour
             }
             else
             {
-                if (reputation <= 20)
+                if (reputation <= 25)
                 {
                     //positive
                     lvl3_npc_dialogue_1.text = "Help us!";

@@ -26,9 +26,9 @@ public class DisplayScores : MonoBehaviour
         sanityScore = ScoreManager.instance.GetSanityScore();
         sanityScoreElement.text = "Sanity Score: " + sanityScore.ToString();
 
-        if (sanityScore <= -40)
+        if (sanityScore <= -35)
             {
-                if (reputation <= -40)
+                if (reputation <= -35)
                 {
                     //scared
                     anarchistOrPacifist.text = "Heavy Anarchist";
@@ -39,12 +39,12 @@ public class DisplayScores : MonoBehaviour
                     anarchistOrPacifist.text = "Moderate Anarchist";
                 }
             }
-            else if (sanityScore <= -20)
+            else if (sanityScore <= -15)
             {
-                if (reputation <= 5)
+                if (reputation < 10)
                 {
                     //mixed
-                    anarchistOrPacifist.text = "Moderate Anarchist";
+                    anarchistOrPacifist.text = "Light Anarchist";
                 }
                 else
                 {
@@ -62,13 +62,13 @@ public class DisplayScores : MonoBehaviour
                 else 
                 {
                     //positive
-                    anarchistOrPacifist.text = "Moderate Pacifist";
+                    anarchistOrPacifist.text = "Light Pacifist";
                     
                 }
             }
             else
             {
-                if (reputation <= 20)
+                if (reputation <= 25)
                 {
                     //positive
                     anarchistOrPacifist.text = "Moderate Pacifist";

@@ -11,6 +11,10 @@ public class FinalDoorKey : MonoBehaviour
     public bool playerIsClose;
     public AudioSource audioSource_;
     private bool pointsAdded = false;
+    public TMP_Text lvl3_npc_dialogue_8;
+    public TMP_Text lvl3_npc_dialogue_10;
+    public TMP_Text lvl3_npc_dialogue_11;
+    public TMP_Text lvl3_npc_dialogue_14;
 
     // Start is called before the first frame update
     // void Start()
@@ -25,6 +29,10 @@ public class FinalDoorKey : MonoBehaviour
         {
             door_.GetComponent<SpriteRenderer>().sprite = doorOpen;
             door_.GetComponent<BoxCollider2D> ().enabled = false;
+            lvl3_npc_dialogue_8.text = "We're Free!";
+            lvl3_npc_dialogue_10.text = "We're Free!";
+            lvl3_npc_dialogue_11.text = "We're Free!";
+            lvl3_npc_dialogue_14.text = "We're Free!";
             if (!pointsAdded)
             {
                 ScoreManager.instance.AdddPoints(15, 15);

@@ -25,7 +25,7 @@ public class PrisonerShot : MonoBehaviour
             Destroy(gameObject);
             Destroy(lvl3_npc_dialogue);
             ScoreManager.instance.PrisonerDestroyed();
-            ScoreManager.instance.AdddPoints(-10, -10);
+            ScoreManager.instance.AdddPoints(-20, -20);
         }
     }
     void OnTriggerEnter2D(Collider2D other){

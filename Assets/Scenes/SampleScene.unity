@@ -7717,6 +7717,10 @@ MonoBehaviour:
   doorOpen: {fileID: 21300160, guid: 29c9cded5e558164aaf8c9bf08aa1510, type: 3}
   playerIsClose: 0
   audioSource_: {fileID: 789426161}
+  lvl3_npc_dialogue_8: {fileID: 167225073}
+  lvl3_npc_dialogue_10: {fileID: 2042413598}
+  lvl3_npc_dialogue_11: {fileID: 92404742}
+  lvl3_npc_dialogue_14: {fileID: 550196121}
 --- !u!1001 &1302152440
 PrefabInstance:
   m_ObjectHideFlags: 0
