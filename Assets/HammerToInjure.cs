@@ -25,7 +25,7 @@ public class HammerToInjure : MonoBehaviour
             audioSource_.Play();
             if (!pointsAdded)
             {
-                ScoreManager.instance.AdddPoints(-20, -20);
+                ScoreManager.instance.AdddPoints(-5, -5);
                 pointsAdded = true;
             }
         }

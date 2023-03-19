@@ -10,6 +10,7 @@ public class FinalDoorKey : MonoBehaviour
     public Sprite doorOpen;
     public bool playerIsClose;
     public AudioSource audioSource_;
+    private bool pointsAdded = false;
 
     // Start is called before the first frame update
     // void Start()
@@ -24,6 +25,11 @@ public class FinalDoorKey : MonoBehaviour
         {
             door_.GetComponent<SpriteRenderer>().sprite = doorOpen;
             door_.GetComponent<BoxCollider2D> ().enabled = false;
+            if (!pointsAdded)
+            {
+                ScoreManager.instance.AdddPoints(15, 15);
+                pointsAdded = true;
+            }
             audioSource_.Play();
         }
     }

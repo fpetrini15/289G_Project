@@ -20,7 +20,7 @@ public class hammerPrisoners : MonoBehaviour
                 audioSource_.Play();
                 Destroy(gameObject);
                 Destroy(lvl3_npc_dialogue);
-                ScoreManager.instance.AdddPoints(-10, -10);
+                ScoreManager.instance.AdddPoints(-5, -5);
                 pointsAdded = true;
             }
         }

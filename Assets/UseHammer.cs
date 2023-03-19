@@ -39,7 +39,7 @@ public class UseHammer : MonoBehaviour
                 lvl2_door.GetComponent<BoxCollider2D> ().enabled = false;
                 if (!pointsAdded)
                 {
-                    ScoreManager.instance.AdddPoints(15, -15);
+                    ScoreManager.instance.AdddPoints(15, -10);
                     pointsAdded = true;
                 }
                 if(ScoreManager.instance.GetSanityScore() <= 0) { // clean runs are rewarded

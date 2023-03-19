@@ -61,7 +61,7 @@ public class Explosion : MonoBehaviour
             lvl2_npc_dialogue_2.text = selected_dialogue_2;
             if (!pointsAdded)
             {
-                ScoreManager.instance.AdddPoints(-40, -40);
+                ScoreManager.instance.AdddPoints(-5, -5);
                 pointsAdded = true;
             }
             

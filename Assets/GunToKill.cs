@@ -27,7 +27,7 @@ public class GunToKill : MonoBehaviour
             pickUp();
             if (!pointsAdded)
             {
-                ScoreManager.instance.AdddPoints(-30, -30);
+                ScoreManager.instance.AdddPoints(-10, -10);
                 pointsAdded = true;
             }
         }
