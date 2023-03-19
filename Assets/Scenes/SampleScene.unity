@@ -1793,8 +1793,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Psssst, come here. I can give you a have a lock pick I've been crafting
-    that can help us all get out of here.
+  m_text: Psssst, come here. I can give you a lock pick. I've been crafting one that
+    can help us all get out of here.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2950,7 +2950,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.09, y: 1.1, z: -10}
+  m_LocalPosition: {x: -0.09, y: -0.00000011920929, z: -10}
   m_LocalScale: {x: 0.9237, y: 0.8202, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2970,7 +2970,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1680012187}
-  lerpSpeed: 2
+  lerpSpeed: 10
 --- !u!1 &535088605 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2055102311959635369, guid: 6a057178eb028e94fb93bf39262ea3e8,
