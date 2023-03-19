@@ -8,7 +8,6 @@ public class UseHammer : MonoBehaviour
     public GameObject blood, guard, fov;
     public GameObject lvl2_door;
     public GameObject finalDoor_;
-    public GameObject endDoorKey_;
     public Sprite doorOpen;
     public bool playerIsClose;
     public bool attackingGuard = false;
@@ -41,9 +40,6 @@ public class UseHammer : MonoBehaviour
                 {
                     ScoreManager.instance.AdddPoints(15, -10);
                     pointsAdded = true;
-                }
-                if(ScoreManager.instance.GetSanityScore() <= 0) { // clean runs are rewarded
-                    endDoorKey_.SetActive(false);
                 }
             } else {
                 breakDoor_.Play();

@@ -6,7 +6,6 @@ public class KillGuard : MonoBehaviour
 {
     public GameObject bullet, fov, blood;
     public GameObject lvl2_door;
-    public GameObject endDoorKey_;
     public Sprite doorOpen;
     public bool shotByBullet = false;
     private bool pointsAdded = false;
@@ -33,9 +32,6 @@ public class KillGuard : MonoBehaviour
             {
                 ScoreManager.instance.AdddPoints(20, -15);
                 pointsAdded = true;
-            }
-            if(ScoreManager.instance.GetSanityScore() <= 0) { // clean runs are rewarded
-                endDoorKey_.SetActive(false);
             }
         }
     }
