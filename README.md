@@ -12,9 +12,13 @@ This game was developed with Unity, which is a requirement in order to run and p
   <li>Press spacebar to attack with hammer or shoot the gun if any of these weapons are equipped.</li>
 </ul>
 
-<h3>Screenshots</h3>
-![Level 1](level1-Game.png)
-
-
 <h3>Video Demo</h3>
 https://drive.google.com/file/d/1zVLKBmsjcU9HPe3yGD2vD9cZ_y61AMzW/view?usp=sharing
+
+<h3>Screenshots</h3>
+<img width="909" alt="level1-Game" src="https://user-images.githubusercontent.com/65323408/226214713-cb94eb0d-82b9-4b93-9e45-84d16e0f3d41.png">
+<img width="909" alt="level2-Game" src="https://user-images.githubusercontent.com/65323408/226214715-ef605221-4b2b-4200-8eac-2b6c15b5be6a.png"
+<img width="909" alt="level3-Game" src="https://user-images.githubusercontent.com/65323408/226214716-5c3cee65-645f-48a6-bda2-44ccbb162916.png">
+
+
+
