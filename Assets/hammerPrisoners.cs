@@ -13,7 +13,7 @@ public class hammerPrisoners : MonoBehaviour
 
     void Update()
     {
-        if (pickUpAllowed && Input.GetKeyDown(KeyCode.E)){
+        if (pickUpAllowed && (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Space))){
             if (!pointsAdded)
             {
                 GameObject bloodIns = Instantiate(blood, transform.position, Quaternion.identity);
